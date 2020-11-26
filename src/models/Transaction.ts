@@ -1,20 +1,20 @@
 import { v4 as uuid } from 'uuid';
 
 class Transaction {
-  id: string;
+    public id: string;
 
-  title: string;
+    public title: string;
 
-  value: number;
+    public value: number;
 
-  type: 'income' | 'outcome';
+    public type: 'income' | 'outcome';
 
-  constructor({ title, value, type }: Omit<Transaction, 'id'>) {
-    this.id = uuid();
-    this.title = title;
-    this.value = value;
-    this.type = type;
-  }
+    constructor({ title, value, type }: Omit<Transaction, 'id'>) {
+        this.id = uuid();
+        this.title = title;
+        this.value = value;
+        this.type = type;
+    }
 }
 
 export default Transaction;
